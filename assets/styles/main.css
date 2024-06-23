@@ -1,0 +1,422 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+}
+:root{
+    --main-color: rgb(27, 28, 55);
+    --secound-color: #7579ff;
+    --text-color: #FFFFFF;
+    --first-gradiant-color: #ad2df1;
+    --secound-gradiant-color: #7b72fe;
+}
+button{
+    cursor: pointer;
+}
+header{
+    width: 80%;
+    height: 72.11px;
+    margin: 10px auto;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+}
+header .nav-btn{
+    display: none;
+}
+header span{
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+}
+header span img{
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    border-radius: 50%;
+    background-image: linear-gradient(rgba(178, 36, 239, 1),rgba(117, 121, 255, 1));
+}
+header nav{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    transition: all .5s;
+}
+header nav ul{
+    display: flex;
+    list-style: none;
+    
+}
+header nav ul li a{
+    position: relative;
+    margin: 0 5px;
+    color: var(--text-color);
+    text-decoration: none;
+    text-transform: capitalize;
+}
+header nav ul li a::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -28px;
+    width: 100%;
+    height: 3px;
+    background-color: var(--secound-color);
+    opacity: 0;
+    transition: opacity .68s;
+}
+header nav ul li a:hover:before{
+    opacity: 1;
+}
+.active a::before{
+    opacity: 1;
+}
+header button {
+    background-color: var(--secound-color);
+    color: var(--text-color);
+    padding: 8px 12px;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+/***/
+.home-section{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 90vh;
+    padding: 0 10%;
+    margin-top: 70px;
+}
+.home-section  div{
+    width: 50%;
+}
+.hoem-data-section h1{
+    font-size: 100px;
+    color: var(--main-color);
+    margin-top: 40px;
+    position: relative;
+}
+.hoem-data-section h1 img{
+    position: absolute;
+    right: 100px;
+    top: -20px;
+    width: 100px;
+}
+.hoem-data-section p{
+    width: 65%;
+    font-size: 14px;
+    margin-top: 30px;
+}
+.hoem-data-section button{
+    background-image: linear-gradient(to right, var(--first-gradiant-color),var(--secound-gradiant-color));
+    color: var(--text-color);
+    padding: 12px 0;
+    margin-top: 40px;
+    border: 0;
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-size: 18px;
+    width: 40%;
+    position: relative;
+}
+.hoem-data-section button img{
+    position: absolute;
+    right: -280px;
+    top: -20px;
+}
+.home-section img{
+    width: 100%;
+}
+/**/
+.skills-section{
+    width: 100%;
+    padding: 0 10%;
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.skills-section h2 {
+    font-size: 72px;
+    background: -webkit-linear-gradient(var(--first-gradiant-color),var(--secound-gradiant-color));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+.skills-section h2 img {
+    position: absolute;
+    left: 90px;
+    top: -60px;
+}
+.skills-section ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: start;
+    margin-top: 40px;
+    list-style: none;
+}
+.skills-section ul li{
+    width: 220px;
+}
+
+/***/
+.aboutme-section{
+    background-image: url("../img/Vector\ 2.svg");
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 170vh;
+    margin-top: 50px;
+}
+.aboutme-section h2{
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--text-color);
+    font-size: 38px;
+    padding-top: 60px;
+}
+.aboutme-section div{
+    position: relative;
+}
+.aboutme-section div .aboutme-img-two{
+    width: 100%;
+}
+.aboutme-img{
+    position: absolute;
+    right: 60px;
+    top: 190px;
+    width: 120px;
+}
+
+/***/
+.portfolio-section h2 {
+    font-size: 72px;
+    background: -webkit-linear-gradient(var(--first-gradiant-color),var(--secound-gradiant-color));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+.portfolio-section{
+    margin-top: 50px;
+    overflow: hidden;
+    width: 100%;
+}
+.portfolio-section h2{
+    margin-left: 6%;
+}
+.portfolio-section h2 img {
+    position: absolute;
+    left: 100px;
+    top: 70px;
+}
+.crousal-container{
+    width: 200%;
+    height: 400px;
+    margin-top: 120px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.crousal-child{
+    width: 400px;
+    height: 200px;
+    margin: 0 50px;
+    background-color: rgb(240, 240, 240);
+    border-radius: 15px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.crousal-child img{
+    position: absolute;
+    width: 90%;
+    height: 233px;
+    left: 5%;
+    top: -130px;
+    border-radius: 20px;
+}
+.crousal-child h3 {
+    margin-top: 30%;
+    margin-left: 30px;
+    background: -webkit-linear-gradient(var(--first-gradiant-color),var(--secound-gradiant-color));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.crousal-child p{
+    font-size: 12px;
+    color: gray;
+    margin-left: 30px;
+}
+
+/***/
+footer{
+    width: 100%;
+    height: 200px;
+    background-color: rgb(240, 240, 240);
+    border-radius: 10% 10% 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+footer div{
+    margin: 15px 0;
+    color: gray;
+    display: flex;
+}
+footer div a{
+    margin: 0 15px;
+}
+.Patron-de-Puntos-1{
+    position: absolute;
+    right: 0;
+    top: 30px;
+}
+.Patron-de-Puntos-2{
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+}
+/***/
+.show{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.hide{
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+/***/
+
+@media screen and (max-width: 834px) {
+    header{
+        position: relative;
+        justify-content: space-between;
+        padding: 0 25px;
+    }
+    header .nav-btn{
+        display: block;
+    }
+    header nav{
+        position: absolute;
+        right: 10px;
+        top: 80px;
+        background-color: var(--main-color);
+        flex-direction: column;
+        padding: 5px;
+    }
+    header nav ul{
+        flex-direction: column;
+        align-items: stretch;
+    }
+    header nav ul li a{
+        display: block;
+        padding: 15px;
+    }
+    header nav ul li a::before{
+        display: none;
+    }
+    header nav ul li a:hover{
+        background-color: var(--secound-color);
+    }
+    header nav button{
+        margin-top: 5px;
+    }
+    /**/
+    .home-section{
+        flex-direction: column;
+        height: auto;
+    }
+    .home-section  div{
+        width: 100%;
+    }
+    .hoem-data-section h1 img{
+        right: 180px;
+    }
+    .hoem-data-section p{
+        width: 55%;
+    }
+    .home-section  div:last-child img{
+        display: none;
+    }
+    /***/
+    .skills-section{
+        margin-top: 180px;
+    }
+    .skills-section ul li{
+        margin: 15px 5%;
+    }
+    /**/
+    .aboutme-section div{
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 428px){
+    .hoem-data-section h1{
+        font-size: 70px;
+    }
+    .hoem-data-section h1 img{
+        right: 5px;
+        top: -35px;
+        width: 100px;
+    }
+    .hoem-data-section button img{
+        right: -150px;
+        top: -20px;
+    }
+    /**/
+    .skills-section ul li{
+        width: 140px;
+        margin: 15px 3%;
+    }
+    .skills-section ul li img{
+        width: 100%;
+    }
+    /**/
+    .aboutme-section{
+        background-size:cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        min-height: 400px;
+        margin-top: 50px;
+    }
+    .aboutme-section div{
+        margin: 0;
+    }
+    .aboutme-img{
+        right: 0px;
+        top: 40px;
+        width: 50px;
+    }
+    /**/
+    .crousal-child{
+        margin: 0 30px;
+    }
+    .crousal-child img{
+        height: 133px;
+        top: -50px;
+    }
+    .crousal-child h3 {
+        margin-top: 50%;
+    }
+    /**/
+    footer div a{
+        margin: 0 5px;
+    }
+    footer div a img{
+        width: 30px;
+    }
+    .Patron-de-Puntos-1{
+        width: 40px;
+    }
+    .Patron-de-Puntos-2{
+        width: 60px;
+    }
+}
